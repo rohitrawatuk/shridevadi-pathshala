@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShriDevAdi Pathshala - Online Tutorials</title>
+    <link rel="stylesheet" href="tutor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    
+  
+   </head>
+<body>
+    <header>
+     
+        <div class="logo"><i class="fa-solid fa-book-open-reader"></i> ShriDevAdi <span class="logob">Pathshala</span></div>
+       
+        <nav>
+            <ul class="nav-links hidden">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#tutorials" class="nav-link active">Tutorials</a></li>
+                <li><a href="#about" class="nav-link active">About</a></li>
+                <li><a href="#contact" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+              </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1 class="typewriter">Welcome to <i class="fa-solid fa-book-open-reader"></i> ShriDevAdi Pathshala</h1>
+        <p>Your platform for free online tutorials</p>
+        <button onclick="scrollToTutorials()">Explore Tutorials</button>
+    </section>
+
+    <section id="tutorials">
+        <h2>Our Tutorials</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-brands fa-html5 html"></i>
+                <h3>HTML Basics</h3>
+                <p>Learn the fundamentals of HTML and start building websites.</p>
+                <button onclick="location.href='html-tutorial.html'">Start Learning</button>
+            </div>
+            <div class="card">
+                <i class="fa-brands fa-css3-alt css"></i>
+                <h3>CSS Styling</h3>
+                <p>Design beautiful web pages using CSS.</p>
+                <button onclick="location.href='css-tutorial.html'">Start Learning</button>
+            </div>
+            <div class="card">
+                <i class="fa-brands fa-js javascript"></i>
+                <h3>JavaScript</h3>
+                <p>Add interactivity to your website with JavaScript.</p>
+                <button onclick="location.href='javascript-tutorial.html'">Start Learning</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About <i class="fa-solid fa-book-open-reader"></i> ShriDevAdi Pathshala</h2>
+        <p>ShriDevAdi Pathshala is an online platform that provides free tutorials to help beginners learn web development easily.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+       
+        <div class="social-icon">
+            <a href="https://github.com/rohitrawatuk" class="github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/rohit-rawat-372709298" class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/RohitSingh37002" class="twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/rohit_rawat_u_k12/" class="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+        <p>&copy; 2025 <i class="fa-solid fa-book-open-reader"></i> ShriDevAdi Pathshala. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showAlert(tutorial) {
+    alert("You selected: " + tutorial + ". Happy learning!");
+}
+
+function scrollToTutorials() {
+    document.getElementById("tutorials").scrollIntoView({ behavior: "smooth" });
+}
+
+// Contact form submission
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Thank you for contacting us!");
+    this.reset();
+});
+
+    </script>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
+  
+    // Toggle menu on hamburger click
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  
+    // Hide menu when a nav link is clicked
+    navItems.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

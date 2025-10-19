@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial | YourWebsite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Sidebar navigation */
+        nav {
+            width: 250px;
+            background-color: #34495e;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+        }
+
+        nav h2 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #2c3e50;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+
+        nav ul li:hover {
+            background-color: #3d566e;
+        }
+
+        /* Main content */
+        main {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h3 {
+            color: #e67e22;
+        }
+
+        pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #c0392b;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            main {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav>
+        <h2>HTML Tutorial</h2>
+        <ul>
+            <li onclick="scrollToSection('intro')">Introduction</li>
+            <li onclick="scrollToSection('basics')">Basics</li>
+            <li onclick="scrollToSection('elements')">HTML Elements</li>
+            <li onclick="scrollToSection('attributes')">Attributes</li>
+            <li onclick="scrollToSection('forms')">Forms</li>
+            <li onclick="scrollToSection('media')">Media</li>
+            <li onclick="scrollToSection('tables')">Tables</li>
+            <li onclick="scrollToSection('semantic')">Semantic HTML</li>
+            <li onclick="scrollToSection('projects')">Projects</li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="intro">
+            <h3>Introduction to HTML</h3>
+            <p>HTML (HyperText Markup Language) is the standard language for creating web pages. It structures content on the web.</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <section id="basics">
+            <h3>HTML Basics</h3>
+            <p>HTML consists of tags that define elements. Every element has an opening and closing tag.</p>
+            <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;
+&lt;img src="image.jpg" alt="Example Image"&gt;</code></pre>
+        </section>
+
+        <section id="elements">
+            <h3>HTML Elements</h3>
+            <p>Common HTML elements:</p>
+            <ul>
+                <li>&lt;h1&gt; to &lt;h6&gt; - Headings</li>
+                <li>&lt;p&gt; - Paragraph</li>
+                <li>&lt;a&gt; - Links</li>
+                <li>&lt;img&gt; - Images</li>
+                <li>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; - Lists</li>
+            </ul>
+        </section>
+
+        <section id="attributes">
+            <h3>HTML Attributes</h3>
+            <p>Attributes provide additional information about elements.</p>
+            <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit Website&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description" width="300"&gt;</code></pre>
+        </section>
+
+        <section id="forms">
+            <h3>Forms</h3>
+            <p>Forms are used to collect user input.</p>
+            <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+        </section>
+
+        <section id="media">
+            <h3>Media Elements</h3>
+            <p>HTML supports images, audio, and video.</p>
+            <pre><code>&lt;img src="image.jpg" alt="Example"&gt;
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+&lt;video controls width="400"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+        </section>
+
+        <section id="tables">
+            <h3>Tables</h3>
+            <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Rohit&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </section>
+
+        <section id="semantic">
+            <h3>Semantic HTML</h3>
+            <p>Semantic elements clearly describe their meaning:</p>
+            <ul>
+                <li>&lt;header&gt; - Header of page</li>
+                <li>&lt;nav&gt; - Navigation links</li>
+                <li>&lt;section&gt; - Section of content</li>
+                <li>&lt;article&gt; - Article content</li>
+                <li>&lt;footer&gt; - Footer of page</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h3>Projects</h3>
+            <ul>
+                <li>Personal Portfolio Page</li>
+                <li>Simple Blog Layout</li>
+                <li>Landing Page</li>
+                <li>HTML Form with Validation</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        function scrollToSection(sectionId){
+            document.getElementById(sectionId).scrollIntoView({behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
